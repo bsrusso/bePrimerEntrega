@@ -1,0 +1,38 @@
+[
+    {
+        "title": "Mouse",
+        "price": "5400",
+        "thumbnail": "https://resource.logitechg.com/w_1000,c_limit,q_auto,f_auto,dpr_auto/d_transparent.gif/content/dam/products/gaming/gaming-mice/g305-lightspeed-wireless-gaming-mouse/g304-g305-lightspeed-wireless-gaming-mouse21.png?v=1",
+        "id": 1,
+        "descripcion": "Descripción mouse actualizada",
+        "codigo": "COD000Mouse",
+        "stock": "60"
+    },
+    {
+        "title": "Impresora",
+        "price": 20000,
+        "thumbnail": "https://img.freepik.com/vector-gratis/impresora-inyeccion-tinta-realista-isoalted-sobre-fondo-blanco_208593-71.jpg?w=996",
+        "id": 3,
+        "stock": 100,
+        "descripcion": "Descripcion impresora",
+        "codigo": "COD000Impresora"
+    },
+    {
+        "title": "Smartphone",
+        "price": 60000,
+        "thumbnail": "https://img.freepik.com/psd-gratis/diseno-maqueta-smartphone-pantalla-completa_53876-65968.jpg?t=st=1649697190~exp=1649697790~hmac=f8dbd176d0bca095ca0daca7406973103ea202eb23c89a31aff21c15ad591370&w=826",
+        "id": 4,
+        "stock": 100,
+        "descripcion": "Descripcion smartphone",
+        "codigo": "COD000Smartphone"
+    },
+    {
+        "title": "testAgregar",
+        "price": "123",
+        "thumbnail": "https://img.freepik.com/foto-gratis/bandera-argentina_1401-2062.jpg?w=1380",
+        "stock": "131",
+        "descripcion": "test",
+        "codigo": "COD000testAgregar",
+        "id": 6
+    }
+]

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("templates/header") %>
+
+    <body>
+        <header class="container">
+            <h1 class="text-center">Actualizar Productos</h1>
+        </header>
+        <%if(producto.title !=undefined){%>
+            <form action="/api/productos?_method=PUT" class="container" method="POST">
+                <input type="hidden" class="form-control" id="id" name="id" value="<%=producto.id%>" />
+                <div class="mb-3">
+                    <label for="title" class="form-label">Nuevo nombre del producto:</label>
+                    <input type="text" class="form-control" id="title" name="title" value="<%=producto.title%>" />
+                </div>
+                <div class="mb-3">
+                    <label for="descripcion" class="form-label">Nueva descripcion del producto:</label>
+                    <input type="text" class="form-control" id="descripcion" name="descripcion"
+                        value="<%=producto.descripcion%>" />
+                </div>
+                <div class="mb-3">
+                    <label for="price" class="form-label">Nuevo precio del producto:</label>
+                    <input type="number" class="form-control" id="price" name="price" value="<%=producto.price%>" />
+                </div>
+                <div class="mb-3">
+                    <label for="thumbnail" class="form-label">Nueva imagen del producto:</label>
+                    <input type="text" class="form-control" id="thumbnail" name="thumbnail"
+                        value="<%=producto.thumbnail%>" />
+                </div>
+                <div class="mb-3">
+                    <label for="thumbnail" class="form-label">Nuevo stock del producto:</label>
+                    <input type="number" class="form-control" id="stock" name="stock" value="<%=producto.stock%>" />
+                </div>
+
+
+                <button type="submit" class="btn btn-primary mb-3">Actualizar producto</button>
+                <br>
+            </form>
+            <form action="/api/productos?_method=DELETE" class="container" method="POST">
+                <input type="hidden" class="form-control" id="id" name="id" value="<%=producto.id%>" />
+                <button type="submit" class="btn btn-danger mb-3">Eliminar producto</button>
+                <br>
+                <a href="/api/productos">Ver productos</a>
+            </form>
+
+            <%}else{%>
+                <div class="text-center w-100">
+                    <h2>El producto no existe</h2>
+                </div>
+                <%}%>
+                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+                        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+                        crossorigin="anonymous"></script>
+    </body>
+
+</html>

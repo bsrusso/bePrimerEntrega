@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("./templates/header") %>
+
+    <body>
+        <div class="container-fluid">
+            <h1 class="text-center mb-5">Productos</h1>
+            <div class="row">
+                <%if(producto.title !=undefined){%>
+                    <div class="col-4 mb-3">
+                        <div class="card h-100" style="width: 18rem;">
+                            <img class="card-img-top" src='<%=producto.thumbnail%>' alt="Card image cap">
+                            <div class="card-body d-flex align-items-end flex-row">
+                                <p style="font-weight: 400;">
+                                    <strong class="h5">
+                                        <%=producto.title%>
+                                    </strong>
+                                    <br>
+                                    Precio: $<%=producto.price%>
+                                        <br>
+                                        Descripcion: <%=producto.descripcion%>
+                                            <br>
+                                            Stock disponible: <%=producto.stock%>
+                                </p>
+                            </div>
+                            <form action="/api/carrito/1/productos" method="POST">
+                                <input type="hidden" class="form-control" id="id" name="id" value="<%=producto.id%>" />
+                                <button class="btn btn-primary mb-3">Agregar al 🛒</button>
+                            </form>
+                            <%if(admin){%>
+                                <a class="btn btn-warning"
+                                    href='/api/admin/actualizarProducto/<%=prod.id%>'>Modificar</a>
+                                <%}%>
+                        </div>
+                    </div>
+                    <%}else{%>
+                        <div class="text-center w-100">
+                            <h2>El producto no existe</h2>
+                        </div>
+                        <%}%>
+            </div>
+            <a href="/api/productos">Volver a todos los productos</a>
+        </div>
+    </body>
+
+</html>
