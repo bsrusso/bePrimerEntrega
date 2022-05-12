@@ -20,9 +20,9 @@ app.use(methodOverride('_method'))
 
 //Vista raiz
 app.get("/", async (req, res) => {
-    let productos = await contenedor.getAll()
-    res.render(__dirname + "/views/products/productos.ejs", { productos })
+    res.redirect('/api/productos')
 })
+
 
 
 app.use("/api", products)
